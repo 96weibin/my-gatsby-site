@@ -1,0 +1,17 @@
+.cell{
+    width: 20px;
+    height: 20px;
+    border: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body{
+    color: #424242;
+}
+
+.container{
+    margin: auto;
+    max-width: 500px;
+}
