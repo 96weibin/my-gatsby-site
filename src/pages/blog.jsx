@@ -1,7 +1,7 @@
 import React from "react";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import { Link } from "gatsby";
 const Blog = ({data})=>{
     let blogs = data.allMdx.nodes.map(x => (

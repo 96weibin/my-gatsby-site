@@ -3,12 +3,14 @@ import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 import { graphql } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import {heroImage} from './blog.module.css'
 
 const BlogPost = ({data, children})=>{
     console.log(data)
     const image = getImage(data.mdx.frontmatter.hero_image)
     return (<Layout pageTitle={data.mdx.frontmatter.title}>
         <GatsbyImage
+            className={heroImage}
             image={image}
             alt={data.mdx.frontmatter.hero_image_alt}
         />
