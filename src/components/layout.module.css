@@ -9,3 +9,14 @@
     font-size: 42px;
     color: gray;
 }
+
+.navBar{
+    display: flex;
+    color: green;
+
+}    
+
+
+.myLink{
+    margin: 5px 10px;  
+}

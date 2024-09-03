@@ -1,21 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import {navBar, myLink} from './index.module.css'
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 const IndexPage = () => {
   return (
     <>
-      <Layout pageTitle="噢噢噢噢">
-        <div className={navBar}>
-          <Link className={myLink} to="/">Home</Link>
-          <Link className={myLink} to="/about">About</Link>
-          <Link className={myLink} to="/blog">Blog</Link>
-        </div>
-      
-      
-      
+      <Layout pageTitle="">
 
         <Kitten width={200} height={200} ph={'哈哈哈哈哈'}></Kitten>
         <StaticImage src="../images/icon.png" width={40} height={40} alt="xxx"/>
@@ -29,7 +20,7 @@ const IndexPage = () => {
 export default IndexPage
 
 export const Head = () => (<>
-  <Seo title="home page"></Seo>
+  <Seo title="Home page"></Seo>
   <link rel="icon" href="/images/icon.png" type="image/ico" />
 </>)
 

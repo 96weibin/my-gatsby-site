@@ -1,5 +1,6 @@
 import React ,{ useState } from "react"
 import {cell} from './game123.module.css'
+import Seo from "../components/seo"
 
 const Cell = ({value}) => {
     
@@ -19,6 +20,11 @@ const GamePage = () => {
     </>)
 }
 
-
-
 export default GamePage;
+
+
+
+export const Head = () => (<>
+    <Seo title="Game page"></Seo>
+    <link rel="icon" href="/images/icon.png" type="image/ico" />
+</>)
