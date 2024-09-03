@@ -2,21 +2,20 @@ import React from "react";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 import { graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 const Blog = ({data})=>{
-    let blogs = data.allMdx.nodes.map(x => (<>
+    let blogs = data.allMdx.nodes.map(x => (
         <article key={x.id}>
-            <h2>{x.frontmatter.title}</h2>
+            <Link to={`/blog/${x.frontmatter.slug}`}>
+                <h2>{x.frontmatter.title}</h2>
+            </Link>
             <p>{x.frontmatter.date}</p>
             <p>{x.excerpt}</p>
-        </article>
-    </>))
+        </article>))
     return(
         <>
             <Layout>
-                <h1>Blog page</h1>
-                <ul>
-                    {blogs}
-                </ul>
+                {blogs}
             </Layout>
         </>
     )
@@ -34,8 +33,9 @@ export const query = graphql`{
         title
         date
         some
+        slug
       }
-      excerpt(pruneLength: 30)
+      excerpt(pruneLength: 10)
       id
     }
   }

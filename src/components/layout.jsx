@@ -17,16 +17,17 @@ const Layout = ({pageTitle, children}) => {
 
     return(<>
         <div className={container}>
-            <h1>{pageTitle}</h1>
-                <Link to="/" style={{"textDecoration": "none"}}>
-                    <header className={headerTitle}>{data.site.siteMetadata.title}</header>
-                </Link>
-                <div className={navBar}>
-                    <Link className={myLink} to="/">Home</Link>
-                    <Link className={myLink} to="/about">About</Link>
-                    <Link className={myLink} to="/blog">Blog</Link>
-                    <Link className={myLink} to="/game">Game</Link>
-                </div>
+            <Link to="/" style={{"textDecoration": "none"}}>
+                <header className={headerTitle}>{data.site.siteMetadata.title}</header>
+            </Link>
+            <div className={navBar}>
+                <Link className={myLink} to="/">Home</Link>
+                <Link className={myLink} to="/about">About</Link>
+                <Link className={myLink} to="/blog">Blog</Link>
+                <Link className={myLink} to="/game">Game</Link>
+            </div>
+            <h2>{pageTitle}</h2>
+
             {children}
         </div>
     </>)
