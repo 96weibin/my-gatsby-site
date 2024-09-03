@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    // `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-transformer-sharp`, // 图片transfer 添加到 graphql
     {
       resolve: "gatsby-source-filesystem",
       options: {
