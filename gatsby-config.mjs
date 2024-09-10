@@ -31,7 +31,7 @@ const config = {
             mdxOptions: {
               remarkPlugins: [
                 // Add GitHub Flavored Markdown (GFM) support
-                remarkGfm,
+                [remarkGfm,"toml"],
                 // To pass options, use a 2-element array with the
                 // configuration in an object in the second element
                 [remarkExternalLinks, { target: false }],
